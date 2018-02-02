@@ -36,7 +36,6 @@ public class VirtualPet {
 		return waste;
 	}
 
-
 	public void feed(int food) {
 		hunger -= food;
 		thirst += 5;
@@ -56,13 +55,14 @@ public class VirtualPet {
 	public void waste(int poop) {
 		waste -= poop;
 	}
+
 	@Override
 	public String toString() {
-		return name+description;
+		return name + description;
 	}
 
 	public String getName() {
-		
+
 		return name;
 	}
 

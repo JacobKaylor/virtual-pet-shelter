@@ -21,6 +21,13 @@ public class VirtualPetShelter {
 		return pets.values();
 	}
 
+	public void subtract(VirtualPet pet) {
+		pets.remove(pet.getName(), pet);
+		
+	}
+
+
+
 
 	
 
