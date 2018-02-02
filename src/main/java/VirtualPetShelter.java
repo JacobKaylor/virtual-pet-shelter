@@ -1,3 +1,5 @@
+
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,6 +15,10 @@ public class VirtualPetShelter {
 	public VirtualPet findPet(String petName) {
 		
 		return pets.get(petName);
+	}
+	
+	public Collection<VirtualPet> pets() {
+		return pets.values();
 	}
 
 
