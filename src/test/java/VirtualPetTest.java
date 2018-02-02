@@ -5,12 +5,12 @@ import org.hamcrest.core.IsEqual;
 import org.junit.Test; 
 
 public class VirtualPetTest {
-//	@Test
-//	public void shouldAcceptName() {
-//		VirtualPet underTest = new VirtualPet("name","description");
-//		String asString = underTest.toString();
-//		assertThat(asString, (equals("name (description)"));
-//	}
+	@Test
+	public void shouldAcceptName() {
+		VirtualPet underTest = new VirtualPet("name","description");
+		String asString = underTest.toString();
+		assertThat(asString, org.hamcrest.Matchers.is("name (description)"));
+	}
 
 	
 	

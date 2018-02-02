@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class VirtualPet {
 
@@ -6,13 +8,14 @@ public class VirtualPet {
 	private int boredom = 50;
 	private int waste = 50;
 	private String name = "";
-	private String description;
+	private String description = "";
+	
 
 	public VirtualPet(String name, String description) {
 		this.name = name;
 		this.description = description;
 	}
-
+	
 	public void tick() {
 		hunger += 3;
 		thirst += 3;
@@ -36,8 +39,8 @@ public class VirtualPet {
 		return waste;
 	}
 
-	public void feed(int food) {
-		hunger -= food;
+	public void feed() {
+		hunger -= 15;
 		thirst += 5;
 		waste += 10;
 	}
@@ -58,12 +61,10 @@ public class VirtualPet {
 
 	@Override
 	public String toString() {
-		return name + description;
+		return name + " ("+description+ ")";
 	}
 
 	public String getName() {
-
 		return name;
 	}
-
 }

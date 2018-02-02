@@ -44,12 +44,13 @@ public class VirtualPetShelterTest {
 		assertTrue(pets.contains(anotherPet));
 		assertEquals(2, pets.size());
 	}
+
 	@Test
 	public void shouldAllowAdoption() {
 		VirtualPet anotherPet = new VirtualPet("jerry", "large");
 		underTest.subtract(pet);
 		underTest.add(anotherPet);
-		
+
 		Collection<VirtualPet> pets = underTest.pets();
 
 		assertThat(pets, org.hamcrest.Matchers.contains(anotherPet));
@@ -57,8 +58,13 @@ public class VirtualPetShelterTest {
 		assertFalse(pets.contains(pet));
 		assertTrue(pets.contains(anotherPet));
 		assertEquals(1, pets.size());
-
 	}
-
+	@Test
+	public void shouldFeedAllPets() {
+		underTest.feedAllPets(pet);
+		
+		Collection<VirtualPet> pets = underTest.pets();
+		
+	}
 
 }
