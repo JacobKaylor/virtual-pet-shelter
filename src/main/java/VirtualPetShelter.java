@@ -9,7 +9,13 @@ public class VirtualPetShelter {
 		pets.put(pet.getName(), pet);
 		
 	}
-	
+
+	public VirtualPet findPet(String petName) {
+		
+		return null;
+	}
+
+
 	
 
 }

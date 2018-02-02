@@ -36,6 +36,7 @@ public class VirtualPet {
 		return waste;
 	}
 
+
 	public void feed(int food) {
 		hunger -= food;
 		thirst += 5;

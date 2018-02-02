@@ -1,3 +1,8 @@
+import static org.junit.Assert.assertThat;
+
+import org.hamcrest.Matcher;
+
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,6 +22,9 @@ public class VirtualPetShelterTest {
 	@Test
 	public void shouldAddPet() {
 		underTest.add(pet);
+		
+		VirtualPet retrieved = underTest.findPet("jim");
+		assertThat(retrieved, org.hamcrest.Matchers.is(pet));
 	}
 
 }
