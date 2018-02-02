@@ -12,7 +12,7 @@ public class VirtualPetShelter {
 
 	public VirtualPet findPet(String petName) {
 		
-		return null;
+		return pets.get(petName);
 	}
 
 

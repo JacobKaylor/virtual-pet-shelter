@@ -1,8 +1,4 @@
 import static org.junit.Assert.assertThat;
-
-import org.hamcrest.Matcher;
-
-
 import org.junit.Before;
 import org.junit.Test;
 

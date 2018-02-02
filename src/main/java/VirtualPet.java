@@ -62,8 +62,8 @@ public class VirtualPet {
 	}
 
 	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return "jim";
 	}
 
 }
