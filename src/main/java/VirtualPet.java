@@ -5,16 +5,19 @@ public class VirtualPet {
 	private int thirst = 50;
 	private int boredom = 50;
 	private int waste = 50;
+	private String name = "";
+	private String description;
+
+	public VirtualPet(String name, String description) {
+		this.name = name;
+		this.description = description;
+	}
 
 	public void tick() {
 		hunger += 3;
 		thirst += 3;
 		boredom += 3;
 		waste += 3;
-	}
-
-	public VirtualPet() {
-
 	}
 
 	public int getHunger() {
@@ -51,6 +54,15 @@ public class VirtualPet {
 
 	public void waste(int poop) {
 		waste -= poop;
+	}
+	@Override
+	public String toString() {
+		return name+description;
+	}
+
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
