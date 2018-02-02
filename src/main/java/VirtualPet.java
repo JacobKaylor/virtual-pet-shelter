@@ -63,7 +63,7 @@ public class VirtualPet {
 
 	public String getName() {
 		
-		return "jim";
+		return name;
 	}
 
 }

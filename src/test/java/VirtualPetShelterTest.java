@@ -1,4 +1,6 @@
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 
 import java.util.Collection;
 
@@ -34,8 +36,11 @@ public class VirtualPetShelterTest {
 		
 		Collection<VirtualPet> pets = underTest.pets();
 		
+		assertThat(pets, org.hamcrest.Matchers.containsInAnyOrder(pet, anotherPet));
 		
-		
+		assertTrue(pets.contains(pet));
+		assertTrue(pets.contains(anotherPet));
+		assertEquals(2, pets.size());
 	}
 
 }
