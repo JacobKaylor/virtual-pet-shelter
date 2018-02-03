@@ -32,5 +32,10 @@ public class VirtualPetShelter {
 		
 	}
 
+	public void waterAllPets() {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 }

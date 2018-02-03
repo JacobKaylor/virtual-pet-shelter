@@ -69,6 +69,17 @@ public class VirtualPetShelterTest {
 		
 		assertEquals(newHunger, anotherPet.getHunger());
 		assertEquals(newHunger, pet.getHunger());
+	}
+	@Test
+	public void shouldWaterAllPets() {
+		VirtualPet anotherPet = new VirtualPet("jerry", "large",50,50,50,50);
+		underTest.add(pet);
+		underTest.add(anotherPet);
+		underTest.waterAllPets();
+		int newThirst = 35;
+		
+		assertEquals(newThirst, anotherPet.getThirst());
+		assertEquals(newThirst, pet.getThirst());
 		
 	}
 
