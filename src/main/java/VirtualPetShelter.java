@@ -25,10 +25,12 @@ public class VirtualPetShelter {
 		pets.remove(pet.getName(), pet);
 
 	}
-
-	public void feedAllPets(VirtualPet pet) {
-		
+	public void feedAllPets() {
+		for(VirtualPet pet : pets.values()) {
+			pet.feed();
+		}
 		
 	}
+
 
 }
