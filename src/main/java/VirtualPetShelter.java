@@ -11,6 +11,7 @@ public class VirtualPetShelter {
 
 	public void add(VirtualPet pet) {
 		pets.put(pet.getName(), pet);
+	
 
 	}
 
@@ -45,11 +46,10 @@ public class VirtualPetShelter {
 
 	}
 
-	public void playWithPet() {
-		for (VirtualPet pet : pets.values()) {
-			pets.get(pet.getName());
+	public void playWithPet(VirtualPet pet) {
+		
 			pet.play();
-		}
+		
 	}
 	public void tick() {
 		for (VirtualPet pet : pets.values()) {

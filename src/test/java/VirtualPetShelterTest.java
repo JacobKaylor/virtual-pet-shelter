@@ -87,7 +87,7 @@ public class VirtualPetShelterTest {
 	@Test
 	public void shouldPlayWithOnePet() {
 		underTest.add(pet);
-		underTest.playWithPet();
+		underTest.playWithPet(pet);
 		int newPlay = 35;
 
 		assertEquals(newPlay, pet.getBoredom());
