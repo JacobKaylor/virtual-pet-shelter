@@ -46,5 +46,11 @@ public class VirtualPetShelter {
 			pet.play();
 		}
 	}
+	public void tick() {
+		for (VirtualPet pet : pets.values()) {
+			//pet.tick();
+		}
+	}
+	 
 
 }

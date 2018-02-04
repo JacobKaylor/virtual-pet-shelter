@@ -92,5 +92,23 @@ public class VirtualPetShelterTest {
 
 		assertEquals(newPlay, pet.getBoredom());
 	}
+	@Test
+	public void tickMethod() {
+		//VirtualPet anotherPet = new VirtualPet("jerry", "large", 50, 50, 50, 50);
+		underTest.add(pet);
+		//underTest.add(anotherPet);
+		underTest.tick();
+		int newHunger = 53;
+		int newThirst = 53;
+		int newBoredom = 53;
+		int newWaste = 53;
+		
+		assertEquals(newHunger, pet.getHunger());
+		assertEquals(newThirst, pet.getThirst());
+		assertEquals(newBoredom, pet.getBoredom());
+		assertEquals(newWaste, pet.getWaste());
+		
+	}
+	
 
 }
