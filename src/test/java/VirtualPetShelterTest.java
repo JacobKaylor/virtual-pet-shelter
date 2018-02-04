@@ -18,7 +18,7 @@ public class VirtualPetShelterTest {
 	public void setup() {
 		underTest = new VirtualPetShelter();
 
-		pet = new VirtualPet("jim", "large",50,50,50,50);
+		pet = new VirtualPet("jim", "large", 50, 50, 50, 50);
 	}
 
 	@Test
@@ -59,28 +59,38 @@ public class VirtualPetShelterTest {
 		assertTrue(pets.contains(anotherPet));
 		assertEquals(1, pets.size());
 	}
+
 	@Test
 	public void shouldFeedAllPets() {
-		VirtualPet anotherPet = new VirtualPet("jerry", "large",50,50,50,50);
+		VirtualPet anotherPet = new VirtualPet("jerry", "large", 50, 50, 50, 50);
 		underTest.add(pet);
 		underTest.add(anotherPet);
 		underTest.feedAllPets();
 		int newHunger = 35;
-		
+
 		assertEquals(newHunger, anotherPet.getHunger());
 		assertEquals(newHunger, pet.getHunger());
 	}
+
 	@Test
 	public void shouldWaterAllPets() {
-		VirtualPet anotherPet = new VirtualPet("jerry", "large",50,50,50,50);
+		VirtualPet anotherPet = new VirtualPet("jerry", "large", 50, 50, 50, 50);
 		underTest.add(pet);
 		underTest.add(anotherPet);
 		underTest.waterAllPets();
 		int newThirst = 35;
-		
+
 		assertEquals(newThirst, anotherPet.getThirst());
 		assertEquals(newThirst, pet.getThirst());
-		
+	}
+
+	@Test
+	public void shouldPlayWithOnePet() {
+		underTest.add(pet);
+		underTest.playWithPet();
+		int newPlay = 35;
+
+		assertEquals(newPlay, pet.getBoredom());
 	}
 
 }

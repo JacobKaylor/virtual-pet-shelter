@@ -9,12 +9,12 @@ public class VirtualPet {
 	private int waste = 50;
 	private String name = "";
 	private String description = "";
-	
 
 	public VirtualPet(String name, String description) {
 		this.name = name;
 		this.description = description;
 	}
+
 	public VirtualPet(String name, String description, int hunger, int thirst, int boredom, int waste) {
 		this.name = name;
 		this.description = description;
@@ -23,8 +23,7 @@ public class VirtualPet {
 		this.boredom = boredom;
 		this.waste = waste;
 	}
-	
-	
+
 	public void tick() {
 		hunger += 3;
 		thirst += 3;
@@ -54,12 +53,12 @@ public class VirtualPet {
 		waste += 10;
 	}
 
-	public void water(int drink) {
-		thirst -= drink;
+	public void water() {
+		thirst -= 15;
 	}
 
-	public void play(int run) {
-		boredom -= run;
+	public void play() {
+		boredom -= 15;
 		thirst += 3;
 		hunger++;
 	}
@@ -70,7 +69,7 @@ public class VirtualPet {
 
 	@Override
 	public String toString() {
-		return name + " ("+description+ ")";
+		return name + " (" + description + ")";
 	}
 
 	public String getName() {

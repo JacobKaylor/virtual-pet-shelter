@@ -25,17 +25,26 @@ public class VirtualPetShelter {
 		pets.remove(pet.getName(), pet);
 
 	}
+
 	public void feedAllPets() {
-		for(VirtualPet pet : pets.values()) {
+		for (VirtualPet pet : pets.values()) {
 			pet.feed();
 		}
-		
+
 	}
 
 	public void waterAllPets() {
-		// TODO Auto-generated method stub
-		
+		for (VirtualPet pet : pets.values()) {
+			pet.water();
+		}
+
 	}
 
+	public void playWithPet() {
+		for (VirtualPet pet : pets.values()) {
+			pets.get(pet.getName());
+			pet.play();
+		}
+	}
 
 }
