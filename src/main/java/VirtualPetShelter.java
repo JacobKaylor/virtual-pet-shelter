@@ -56,6 +56,20 @@ public class VirtualPetShelter {
 			pet.tick();
 		}
 	}
+	public int getHunger(VirtualPet pet) {
+		
+		return pet.getHunger();
+		
+	}
+	public int getThirst(VirtualPet pet) {
+		return pet.getThirst();
+	}
+	public int getBoredom(VirtualPet pet) {
+		return pet.getBoredom();
+	}
+	public int getWaste(VirtualPet pet) {
+		return pet.getWaste();
+	}
 	 
 
 }
