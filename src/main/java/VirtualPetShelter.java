@@ -7,11 +7,9 @@ import java.util.Set;
 public class VirtualPetShelter {
 
 	private Map<String, VirtualPet> pets = new HashMap<>();
-	
 
 	public void add(VirtualPet pet) {
 		pets.put(pet.getName(), pet);
-	
 
 	}
 
@@ -23,7 +21,8 @@ public class VirtualPetShelter {
 	public Collection<VirtualPet> pets() {
 		return pets.values();
 	}
-	public Set<String> name(){
+
+	public Set<String> name() {
 		return pets.keySet();
 	}
 
@@ -47,29 +46,15 @@ public class VirtualPetShelter {
 	}
 
 	public void playWithPet(VirtualPet pet) {
-		
-			pet.play();
-		
+
+		pet.play();
+
 	}
+
 	public void tick() {
 		for (VirtualPet pet : pets.values()) {
 			pet.tick();
 		}
 	}
-	public int getHunger(VirtualPet pet) {
-		
-		return pet.getHunger();
-		
-	}
-	public int getThirst(VirtualPet pet) {
-		return pet.getThirst();
-	}
-	public int getBoredom(VirtualPet pet) {
-		return pet.getBoredom();
-	}
-	public int getWaste(VirtualPet pet) {
-		return pet.getWaste();
-	}
-	 
 
 }
